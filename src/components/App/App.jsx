@@ -56,16 +56,16 @@ export class App extends Component {
     }
   }
 
-  onSubmit = searchData => {
+  onSubmit = (searchData) => {
     if (searchData === '') {
       return toast.error('Write something');
     } else if (searchData === this.state.searchData) {
       return;
     }
     this.setState({
-      searchData: searchData,
+      searchData,
+      images: [],
       page: 1,
-      images: []
     });
   };
 
